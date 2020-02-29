@@ -52,8 +52,8 @@ function mostrar()
                         respuesta +="cantidad de personas de género distinto a masculino ó peso mayor a 80: "+contadorDistinto+"<br>"
 
             
-        } 
-    }
+        } alert(respuesta)
+    } 
 
 /* 
         var nombre;

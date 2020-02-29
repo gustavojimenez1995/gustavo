@@ -1,4 +1,4 @@
-function mostrar()
+function mostrar()    //do while
 {
 
     var paises
@@ -6,26 +6,26 @@ function mostrar()
     var temperatura
     var respuesta;
     var temperaturasImpares=0
-    var masHabitantes
+    var masHabitantes=0;
     var paisMasPoblado;
     var paisesMenos20=0
 
     var acumuladorHabitantes=0
     var contadorHabitantes=0
 
-    var maximaTemperatura
-    var paisMasTemperatura
+    var maximaTemperatura=0;
+    var paisMasTemperatura;
 
-    var respuesta="."
+    //var respuesta="."
 
     while (respuesta!="no") {
         paises=prompt("nombre del pais")
 
         habitantes=parseInt(prompt("cantidad de habitantes"))
         while (habitantes<0 || habitantes>270) {
-            habitantes=parseInt(prompt("error ingrese entre 0 y 270"))}
+            habitantes=parseInt(prompt("error ingrese entre 1 y 270"))}
         temperatura=parseInt(prompt("temperatura"))
-            while (temperatura<-50 || temperatura>50) {
+            while (isNaN(temperatura) || temperatura<-50 || temperatura>50) {
                 temperatura=parseInt(prompt("error ingrese entre -50 y 50 "))}
                
          respuesta=prompt("desea seguir?")
@@ -33,7 +33,7 @@ function mostrar()
         if (temperatura%2!==0) {
             temperaturasImpares++;}
 
-            if (habitantes<masHabitantes) {
+            if (masHabitantes<habitantes) {
                 masHabitantes=habitantes}
                 paisMasPoblado=paises;
                 
@@ -51,13 +51,13 @@ function mostrar()
                             
                         }
     }
-    respuesta="cantidad de temperaturas impares "+temperaturasImpares+"<br>"
-    respuesta="El pais con mas habitante = " +paisMasPoblado+"<br>"
-    respuesta="Cantidad de paises con menos 20°c " +paisesMenos20+"<br>"
-    respuesta="el promedio de habitantes es ="+promedio+"<br>"
-    respuesta="La temperatura maxima es ="+maximaTemperatura+"del pais "+paisMasTemperatura+"<br>"
+   // respuesta=
 
-    document.write(respuesta)
+    document.write("cantidad de temperaturas impares "+temperaturasImpares+"<br>"+
+    "El pais con mas habitante = " +paisMasPoblado+"<br>"+
+    "Cantidad de paises con menos 20°c " +paisesMenos20+"<br>"+
+    "el promedio de habitantes es ="+promedio+"<br>"+
+    "La temperatura maxima es ="+maximaTemperatura+"del pais "+paisMasTemperatura)
    
 
 
@@ -66,7 +66,7 @@ function mostrar()
 
 
 
-
+//flag!
 
 
 } 
@@ -74,3 +74,7 @@ function mostrar()
 
 
     //confim("mensaje")---->true/false
+
+    //touppercase()convertir todo mayuscula
+
+    //confirm
